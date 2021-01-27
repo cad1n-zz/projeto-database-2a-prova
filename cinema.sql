@@ -246,7 +246,7 @@ on f.diretor_idDiretor = d.idDiretor and f.genero_idgenero = g.idgenero
 where f.anoLancamento in(2015,2016,2017,2020);
 
 -- capacidade da sala, nome do filme (en), ano de lançamento, para aqueles cujo nome em ptbr comecem em "B"
-select nomeBR, anoLancamento, s.capacidade from filme f
+select f.nomeBR, f.anoLancamento, s.capacidade from filme f
 join sala s 
 join filme_exibido_sala fes
 on fes.filme_idfilme = f.idfilme and s.idsala = fes.sala_idsala
